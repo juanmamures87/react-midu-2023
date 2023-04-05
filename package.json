@@ -1,0 +1,12 @@
+{
+  "name": "react-2023-midu",
+  "version": "1.0.0",
+  "description": "Curso de React desde 0 con las nuevas actualizaciones de 2023 por Midu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Juanma",
+  "license": "ISC"
+}
