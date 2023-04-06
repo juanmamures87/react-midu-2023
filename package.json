@@ -1,12 +1,20 @@
 {
-  "name": "react-2023-midu",
+  "name": "02.aprendiendo-react-desde-0---2023",
   "version": "1.0.0",
-  "description": "Curso de React desde 0 con las nuevas actualizaciones de 2023 por Midu",
+  "description": "Curso para aprender React desde 0 - 2023 - con Midu",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanmamures87/react-midu-2023.git"
+  },
   "keywords": [],
   "author": "Juanma",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanmamures87/react-midu-2023/issues"
+  },
+  "homepage": "https://github.com/juanmamures87/react-midu-2023#readme"
 }
