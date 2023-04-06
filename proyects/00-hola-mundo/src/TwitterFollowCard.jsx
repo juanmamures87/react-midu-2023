@@ -1,9 +1,23 @@
+//Las props deben ser inmutables. Crear una constante con otro nombre y hay hacer las modificaciones oportunas pero nunca modificar las prop directamente
+
+//children una props especial para una props como hijo del componente
+
+import { useState } from "react";
+
 export function TwitterFollowCard({
-  formatUserName,
-  userName,
-  name,
-  isFollowing,
+  userName = "unknown",
+  children,
+  initialIsFollowing,
 }) {
+  const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
+  const handleClick = () => {
+    setIsFollowing(!isFollowing);
+  };
+  const text = isFollowing ? "Siguiendo" : "Seguir";
+  const buttonClassName = isFollowing
+    ? "tw-followCard-button is-following"
+    : "tw-followCard-button";
+
   return (
     <article className="tw-followCard">
       <header className="tw-followCard-header">
@@ -13,14 +27,14 @@ export function TwitterFollowCard({
           alt="Pingüinos amorosos"
         />
         <div className="tw-followCard-info">
-          <strong>{name}</strong>
-          <span className="tw-followCard-infoUsername">
-            {formatUserName(userName)}
-          </span>
+          <strong>{children}</strong>
+          <span className="tw-followCard-infoUsername">@{userName}</span>
         </div>
       </header>
       <aside>
-        <button className="tw-followCard-button">Seguir</button>
+        <button className={buttonClassName} onClick={handleClick}>
+          {text}
+        </button>
       </aside>
     </article>
   );
